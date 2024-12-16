@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Intro Screen</title>
+    <link rel="stylesheet" href="2.css" />
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background: url("images/MeowMeow.png") no-repeat center center fixed;
+        background-size: cover;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+      }
+
+      .thoughtBubble {
+        position: absolute;
+        height: 10%;
+        width: auto;
+        cursor: pointer;
+      }
+
+      /* Modal styles */
+      .modal {
+        display: none; /* Hidden by default */
+        position: fixed;
+        z-index: 10;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: rgba(0, 0, 0, 0.5); /* Black with opacity */
+        align-items: center;
+        justify-content: center;
+      }
+
+      .modal-content {
+        position: relative;
+        background: transparent;
+        text-align: center;
+      }
+
+      .modal-content img {
+        width: 50%; /* Adjust the size of the image */
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.7);
+      }
+
+      .close-btn {
+        style: top: 60px; left: 1500px; position: absolute;
+        top: 20px;
+        right: 30px;
+        font-size: 30px;
+        font-weight: bold;
+        background: #fff;
+        border-radius: 50%;
+        border: 2px solid #000;
+        width: 40px;
+        height: 40px;
+        text-align: center;
+        line-height: 35px;
+        cursor: pointer;
+        color: #000;
+      }
+
+      .close-btn:hover {
+        background-color: #ffcccc;
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Thought Bubble -->
+    <img
+      src="images/thought.png"
+      alt="Thought Bubble"
+      id="no1"
+      class="thoughtBubble clickable"
+      style="top: 50px; left: 150px; position: absolute"
+    />
+
+    <!-- Modal -->
+    <div class="modal" id="modal">
+      <div class="modal-content">
+        <button class="close-btn" id="closeModal">&times;</button>
+        <img src="images/WEENIES - 13 - Edited - Edited (1).png" />
+      </div>
+    </div>
+    <audio src="audio/background.mp3" type="audio/mp3"></audio>
+
+    <script>
+      const thoughtBubble = document.getElementById("no1");
+      const modal = document.getElementById("modal");
+      const closeModal = document.getElementById("closeModal");
+
+      // Show the modal when the thought bubble is clicked
+      thoughtBubble.addEventListener("click", () => {
+        modal.style.display = "flex"; // Show the modal
+      });
+
+      // Redirect to 1.html when the "X" button is clicked
+      closeModal.addEventListener("click", () => {
+        window.location.href = "3.html"; // Redirect to the next page
+      });
+    </script>
+  </body>
+</html>

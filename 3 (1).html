@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Interactive Modals</title>
+    <link rel="stylesheet" href="3.css" />
+  </head>
+  <body>
+    <div class="row center-content">
+      <div class="background"></div>
+    </div>
+    <div class="bottom">
+      <!-- arrows -->
+      <div class="arrows">
+        <div class="col center-content">
+          <img src="images/left1.png" class="img2 clickable" id="left" />
+        </div>
+        <div class="col center-content">
+          <img
+            src="images/down-left.png"
+            class="img2 clickable"
+            id="down-left"
+          />
+        </div>
+        <div class="col center-content">
+          <img src="images/up-left.png" class="img2 clickable" id="up-left" />
+        </div>
+        <div class="col center-content">
+          <img src="images/up1.png" class="img2 clickable" id="up" />
+        </div>
+        <div class="col center-content">
+          <img src="images/down1.png" class="img2 clickable" id="down" />
+        </div>
+        <div class="col center-content">
+          <img
+            src="images/up-right1.png"
+            class="img2 clickable"
+            id="up-right"
+          />
+        </div>
+        <div class="col center-content">
+          <img
+            src="images/down-right.png"
+            class="img2 clickable"
+            id="down-right"
+          />
+        </div>
+        <div class="col center-content">
+          <img src="images/right1.png" class="img2 clickable" id="right" />
+        </div>
+      </div>
+    </div>
+
+    <div id="intro-modal" class="intro-modal">
+      <div class="intro-modal-content">
+        <button
+          class="intro-modal-close"
+          onclick="document.getElementById('intro-modal').style.display='none'"
+        >
+          Start
+        </button>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
